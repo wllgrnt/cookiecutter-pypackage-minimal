@@ -33,18 +33,17 @@ if __name__ == "__main__":
         remove_file(cli_path)
 
     # install hooks
+    subprocess.run(['pip', 'install', 'pre-commit'])
     subprocess.run(['pre-commit', 'install'])
 
-    # import os
-    import shutil
+    # # move all the 
+    # # Get the current directory path
+    # current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Get the current directory path
-    current_dir = os.path.dirname(os.path.abspath(__file__))
+    # # Get the parent directory path
+    # parent_dir = os.path.dirname(current_dir)
 
-    # Get the parent directory path
-    parent_dir = os.path.dirname(current_dir)
-
-    # Move the generated files to the parent directory
-    for item in os.listdir(current_dir):
-        if item != '__pycache__':
-            shutil.move(os.path.join(current_dir, item), parent_dir)
+    # # Move the generated files to the parent directory
+    # for item in os.listdir(current_dir):
+    #     if item != '__pycache__':
+    #         shutil.move(os.path.join(current_dir, item), parent_dir)

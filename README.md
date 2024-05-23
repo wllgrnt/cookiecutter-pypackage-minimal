@@ -21,6 +21,7 @@ Make your repo on Github first, and clone it locally. Then:
 - `pip install cookiecutter`
 - `cookiecutter https://github.com/wllgrnt/cookiecutter-pypackage-minimal.git`
 
+Note: this will install pre-commit as part of the installation process. It will also unpack itself into whatever directory you are currently in, **overwriting any existing files with the same names**.
 
 TODO: document poetry usage.
 
