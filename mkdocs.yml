@@ -12,6 +12,7 @@ nav:
 plugins:
   - search
   - include-markdown
+      directory: docs
   - mkdocstrings:
       watch:
         - {{ cookiecutter.project_slug }}
