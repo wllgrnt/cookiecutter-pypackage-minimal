@@ -1,4 +1,4 @@
-"""Console script for {{cookiecutter.pkg_name}}."""
+"""Console script for {{cookiecutter.package_name}}."""
 
 {% if cookiecutter.include_cli == "click" %}
 import click

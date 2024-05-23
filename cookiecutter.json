@@ -5,7 +5,7 @@
     "project_short_description": "Skeleton project created by cookiecutter",
     "author_name": "Barry Chuckle",
     "email": "barry@chuckle.com",
-    "include_pytest": ["yes", "no"],
-    "include_mkdocs": ["yes", "no"],
-    "include_cli": ["yes", "no"]
+    "include_pytest": ["y", "n"],
+    "include_mkdocs": ["y", "n"],
+    "include_cli": ["y", "n"]
  }

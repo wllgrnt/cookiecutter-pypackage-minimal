@@ -15,9 +15,12 @@ Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the
 
 ## Usage
 
+
+### Installation
 Make your repo on Github first, and clone it locally. Then:
 - `pip install cookiecutter`
 - `cookiecutter https://github.com/wllgrnt/cookiecutter-pypackage-minimal.git`
+
 
 TODO: document poetry usage.
 
@@ -27,3 +30,15 @@ Using poetry, the package is installed with:
 But idk whether that works with pip currently.
 
 Remember to run `pre-commit install` before your first commit.
+ 
+### Testing
+Run `pytest` from the repo root.
+
+### Docs
+
+
+### CLI
+Whatever you decide to call your package, an executable with that name will be added to your PATH,
+which can be configured using Click.
+
+(TODO where?)

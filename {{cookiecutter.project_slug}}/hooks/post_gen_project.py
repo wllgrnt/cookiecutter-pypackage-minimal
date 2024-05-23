@@ -22,13 +22,13 @@ def remove_file(path):
 
 if __name__ == "__main__":
     # Remove directories or files based on user input
-    if include_pytest == 'no':
+    if include_pytest == 'n':
         remove_directory(tests_path)
 
-    if include_mkdocs == 'no':
+    if include_mkdocs == 'n':
         remove_directory(docs_path)
 
-    if include_cli == 'no':
+    if include_cli == 'n':
         remove_file(cli_path)
 
     # install hooks

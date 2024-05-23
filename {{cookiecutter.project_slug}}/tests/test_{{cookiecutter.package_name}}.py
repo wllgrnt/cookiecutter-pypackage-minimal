@@ -3,7 +3,7 @@
 
 import pytest
 
-{% if cookiecutter.include_cli == "yes" %}
+{% if cookiecutter.include_cli == "y" %}
 from click.testing import CliRunner
 from {{ cookiecutter.package_name }} import cli
 
