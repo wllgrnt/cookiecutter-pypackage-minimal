@@ -1,6 +1,6 @@
 """Console script for {{cookiecutter.package_name}}."""
 
-{% if cookiecutter.include_cli == "click" %}
+{% if cookiecutter.include_cli == "y" %}
 import click
 
 

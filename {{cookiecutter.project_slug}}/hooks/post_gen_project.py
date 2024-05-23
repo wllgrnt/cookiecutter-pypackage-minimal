@@ -27,6 +27,7 @@ if __name__ == "__main__":
 
     if include_mkdocs == 'n':
         remove_directory(docs_path)
+        remove_file('mkdocs.yml')
 
     if include_cli == 'n':
         remove_file(cli_path)
