@@ -1,16 +1,11 @@
 {
     "project_name": "Python Boilerplate",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "pkg_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_short_description": "Skeleton project created by Cookiecutter PyPackage",
+    "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+    "project_short_description": "Skeleton project created by cookiecutter",
     "author_name": "Barry Chuckle",
     "email": "barry@chuckle.com",
-    "github_username": "barry",
-    "python_version": ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"],
-    "version": "0.1.0",
-    "use_cli": ["yes", "no"],
-    "use_pytest": ["yes", "no"],
-    "use_mkdocs": ["yes", "no"],
-    "open_source_license": ["MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "GPL-3.0-only", "Not open source"],
-    "docstrings_style": ["google", "numpy", "pep257"]
+    "include_pytest": ["yes", "no"],
+    "include_mkdocs": ["yes", "no"],
+    "include_cli": ["yes", "no"]
  }

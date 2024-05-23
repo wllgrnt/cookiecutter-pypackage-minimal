@@ -18,3 +18,12 @@ Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the
 Make your repo on Github first, and clone it locally. Then:
 - `pip install cookiecutter`
 - `cookiecutter https://github.com/wllgrnt/cookiecutter-pypackage-minimal.git`
+
+TODO: document poetry usage.
+
+Using poetry, the package is installed with:
+`poetry install --with dev`
+
+But idk whether that works with pip currently.
+
+Remember to run `pre-commit install` before your first commit.
