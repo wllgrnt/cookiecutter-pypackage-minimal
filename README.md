@@ -23,12 +23,12 @@ Make your repo on Github first, and clone it locally. Then:
 
 Note: this will install pre-commit as part of the installation process. It will also unpack itself into whatever directory you are currently in, **overwriting any existing files with the same names**.
 
-TODO: document poetry usage.
 
-Using poetry, the package is installed with:
-`poetry install --with dev`
+Using poetry, the package is installed with `pip install` or `poetry install`. To include the dev dependencies, use:
 
-But idk whether that works with pip currently.
+`poetry install --with dev` or `pip install '.[dev]'`
+
+(pyproject.toml doesn't use the newest pyproject.toml syntax to maintain pip installability)
 
  
 ### Testing
@@ -38,7 +38,4 @@ Run `pytest` from the repo root.
 
 
 ### CLI
-Whatever you decide to call your package, an executable with that name will be added to your PATH,
-which can be configured using Click.
-
-(TODO where?)
+Whatever you decide to call your package, an executable with that name will be added to your PATH, which runs `cli.py:main()`. This can be configured using Click.

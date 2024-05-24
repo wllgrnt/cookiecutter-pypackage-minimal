@@ -1,3 +1,4 @@
+[tool]
 [tool.poetry]
 name = "{{ cookiecutter.package_name }}"
 version = "0.1.0"
@@ -14,27 +15,30 @@ python = "^3.9"
 {% if cookiecutter.include_cli == "y" %}
 click = "^8.0.1"
 {% endif %}
-
-[tool.poetry.group.dev]
-optional = true
-
-[tool.poetry.group.dev.dependencies]
-black = "^21.9b0"
-isort = "^5.9.3"
-flake8 = "^3.9.2"
+black = {version = "^21.9b0", optional = true}
+isort = {version = "^5.9.3", optional = true}
+flake8 = {version = "^3.9.2", optional = true}
+pre-commit = {version = "^2.12.0", optional = true}
 {% if cookiecutter.include_pytest == "y" %}
-pytest = "^6.2.5"
+pytest = {version = "^6.2.5", optional = true}
 {% endif %}
-pre-commit = "^2.12.0"
 {% if cookiecutter.include_mkdocs == "y" %}
-mkdocs = "^1.4.2"
-mkdocs-include-markdown-plugin = "^3.10.0"
-mkdocs-material = "^9.0.3"
-mkdocstrings = "^0.19.0"
-mkdocs-material-extensions = "^1.1.1"
+mkdocs = {version = "^1.6.0", optional = true}
+mkdocs-include-markdown-plugin = {version = "^6.0.6", optional = true}
+mkdocs-material = {version = "^9.5.24", optional = true}
+mkdocstrings = {version = "^0.19.0", optional = true}
+mkdocs-material-extensions = {version = "^1.1.1", optional = true}
 {% endif %}
 
-
+[tool.poetry.extras]
+dev = [
+    "black", "isort", "flake8",
+    "pre-commit"{% if cookiecutter.include_pytest == "y" %},
+    "pytest"{% endif %}{% if cookiecutter.include_mkdocs == "y" %},
+    "mkdocs", "mkdocs-include-markdown-plugin",
+    "mkdocs-material", "mkdocstrings", "mkdocs-material-extensions"
+    {% endif %}
+    ]
 {% if cookiecutter.include_cli == "y" %}
 [tool.poetry.scripts]
 {{ cookiecutter.project_slug }} = '{{ cookiecutter.package_name }}.cli:main'
