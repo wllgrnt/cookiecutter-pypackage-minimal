@@ -55,7 +55,10 @@ if __name__ == "__main__":
         print("Moving the generated files to the parent directory will overwrite existing files:")
         for item in items:
             print(f"\t{item}")
-        confirm = input("Do you want to proceed? (y/n): ")
+        confirm = ' '
+        while confirm not in ['y', 'n']:
+            confirm = input("Do you want to proceed? (y/n): ")
+        
         if confirm.lower() != "y":
             print("Aborted moving files to avoid overwriting.")
             sys.exit(1)

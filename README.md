@@ -1,11 +1,11 @@
 # cookiecutter-pypackage-minimal
 Just pre-commit formatting, pytest, and mkdocs. (I am scared of tox)
 
-Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the bare minimum necessary for Python dev work.
+Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the bare minimum necessary for Python dev work, because I do not want to have to think about Python packaging config ever again.
 
 ## Features
 - poetry build system
-- pre-commit hooks with flake8, black, and isort formatting (not optional)
+- pre-commit hooks with flake8, black, and isort formatting
 - mkdocs for anything in `docs/` (optional)
 - pytest (optional)
 - CLI with Click (optional) 
@@ -30,7 +30,6 @@ Using poetry, the package is installed with:
 
 But idk whether that works with pip currently.
 
-Remember to run `pre-commit install` before your first commit.
  
 ### Testing
 Run `pytest` from the repo root.
