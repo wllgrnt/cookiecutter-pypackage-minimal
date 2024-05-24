@@ -10,9 +10,6 @@ Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the
 - mkdocs in a `docs` folder (optional)
 - pytest in a `tests` folder (optional)
 - CLI with Click (optional) 
-- TODO mkdocstrings (optional)
-- TODO switch to ruff
-- TODO add github tags
 
 ## Usage
 
@@ -25,7 +22,7 @@ Make your repo on Github first, and clone it locally. Then:
 Note: this will install pre-commit as part of the installation process. It will also unpack itself into whatever directory you are currently in, **overwriting any existing files with the same names**.
 
 
-Using poetry, the package is installed with `pip install` or `poetry install`. To include the dev dependencies, use:
+The package is installed with `pip install . ` or `poetry install` from the repo root. To include the dev dependencies, use:
 
 `poetry install --extras "dev"` or `pip install '.[dev]'`
 
@@ -36,7 +33,7 @@ Using poetry, the package is installed with `pip install` or `poetry install`. T
 Run `pytest` from the repo root.
 
 ### Docs
-
+After installing the package, run `mkdocs serve` from the repo root. Docs will be served at localhost:8000.
 
 ### CLI
 Whatever you decide to call your package, an executable with that name will be added to your PATH, which runs `cli.py:main()`. This can be configured using Click.

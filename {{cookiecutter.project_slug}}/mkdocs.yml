@@ -9,17 +9,21 @@ nav:
   - Usage: usage.md
   - API Reference: api.md
 
+watch:
+  - src
+
 plugins:
   - search
-  - include-markdown
-      directory: docs
+  - include-markdown:
+      opening_tag: "{!"
+      closing_tag: "!}"
   - mkdocstrings:
-      watch:
-        - {{ cookiecutter.project_slug }}
-      # handlers:
-      #   python:
-      #     options:
-      #       docstring_style: google
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            docstring_style: google
+            show_submodules: true
 
 
 markdown_extensions:

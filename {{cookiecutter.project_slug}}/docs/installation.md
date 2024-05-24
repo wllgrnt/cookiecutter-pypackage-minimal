@@ -1,8 +1,14 @@
 # Installation
 
 To install {{ cookiecutter.project_name }}, run this command in your
-terminal:
+terminal from the repo root:
 
 ``` console
-$ pip install {{ cookiecutter.project_slug }}
+$ pip install .
+```
+
+To install dev dependencies, use:
+
+``` console
+$ pip install '.[dev]'
 ```
