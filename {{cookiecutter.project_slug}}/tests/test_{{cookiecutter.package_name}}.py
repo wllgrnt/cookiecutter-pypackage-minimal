@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 """Tests for `{{ cookiecutter.package_name }}` package."""
 
-import pytest
-
 {% if cookiecutter.include_cli == "y" %}
 from click.testing import CliRunner
 from {{ cookiecutter.package_name }} import cli

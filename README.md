@@ -5,7 +5,7 @@ Loosely based on https://waynerv.github.io/cookiecutter-pypackage/ with only the
 
 ## Features
 - poetry build system
-- pre-commit hooks with flake8, black, and isort formatting
+- pre-commit hooks with flake8 and black
 - code in a `src` folder
 - mkdocs in a `docs` folder (optional)
 - pytest in a `tests` folder (optional)
@@ -28,7 +28,8 @@ The package is installed with `pip install . ` or `poetry install` from the repo
 
 (pyproject.toml doesn't use the newest pyproject.toml syntax or poetry 'with' syntax to maintain pip installability)
 
- 
+Remember to run `pre-commit install` before commiting new code.
+
 ### Testing
 Run `pytest` from the repo root.
 

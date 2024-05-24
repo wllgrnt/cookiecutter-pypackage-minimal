@@ -35,12 +35,7 @@ if __name__ == "__main__":
 
     if include_cli == "n":
         remove_file(cli_path)
-
-    # install hooks
-    if os.path.exists(".git"):
-        subprocess.run(["pip", "install", "pre-commit"])
-        subprocess.run(["pre-commit", "install"])
-
+ 
     # unpack the template into the parent dir
     current_dir = os.getcwd()
     parent_dir = os.path.dirname(current_dir)
